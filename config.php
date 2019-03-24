@@ -1,5 +1,5 @@
 
-<?/*php
+<? php
 session_start();
 
 // Define database
@@ -17,5 +17,5 @@ try {
 catch(PDOException $e) {
     echo $e->getMessage();
 }
-*/
+
 ?>
