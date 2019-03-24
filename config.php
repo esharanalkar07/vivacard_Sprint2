@@ -6,7 +6,7 @@
         "PWD" => "Mysql123" // update me
     );
     //Establishes the connection
-    $conn = sqlsrv_connect($serverName, $connectionOptions);
+    $connect = sqlsrv_connect($serverName, $connectionOptions);
 
 
    /* $tsql= "SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
