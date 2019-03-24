@@ -2,10 +2,10 @@
 session_start();
 
 // Define database
-define('dbhost', '');
+define('dbhost', 'vivacardshare.scm.azurewebsites.net');
 define('dbuser', '');
 define('dbpass', '');
-define('dbname', '');
+define('dbname', 'localdb');
 
 
 // Connecting database
