@@ -2,8 +2,8 @@
 <? php
 $connectstr_dbhost = 'vivacard.database.windows.net';
 $connectstr_dbname = 'db_group_e_cm004';
-$connectstr_dbusername = 'vivacard';
-$connectstr_dbpassword = 'Mysql123';
+$connectstr_dbusername = '';
+$connectstr_dbpassword = '';
 foreach ($_SERVER as $key => $value) {
  if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
  continue;
