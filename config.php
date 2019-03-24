@@ -1,7 +1,7 @@
 <?php
 $servername = "vivacard.database.windows.net";
-$username = "<vivacard>";
- $password = "<Mysql123>";
+$username = "vivacard";
+ $password = "Mysql123";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=vivacarddb", $username, $password);
