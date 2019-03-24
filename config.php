@@ -3,7 +3,7 @@ session_start();
 
 // Define database
 define('dbhost', 'vivacard.database.windows.net');
-define('dbuser', 'vivacard');
+define('dbuser', 'vivacard@vivacard');
 define('dbpass', 'Mysql123');
 define('dbname', 'vivacarddb');
 
