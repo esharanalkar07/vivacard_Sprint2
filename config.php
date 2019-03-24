@@ -1,20 +1,22 @@
 <?php
-session_start();
-
-// Define database
-define('dbhost', '127.0.0.1:50884');
-define('dbuser', 'root');
-define('dbpass', '');
-define('dbname', 'vivacarddb');
-
-
-// Connecting database
-try {
-    $connect = new PDO("mysql:host=".dbhost."; dbname=".dbname, dbuser, dbpass);
-    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e) {
-    echo $e->getMessage();
-}
-
+    $serverName = "vivacard.database.windows.net"; // update me
+    $connectionOptions = array(
+        "Database" => "vivacarddb", // update me
+        "Uid" => "vivacard", // update me
+        "PWD" => "Mysql123" // update me
+    );
+    //Establishes the connection
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
+    $tsql= "SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
+         FROM [SalesLT].[ProductCategory] pc
+         JOIN [SalesLT].[Product] p
+         ON pc.productcategoryid = p.productcategoryid";
+    $getResults= sqlsrv_query($conn, $tsql);
+    echo ("Reading data from table" . PHP_EOL);
+    if ($getResults == FALSE)
+        echo (sqlsrv_errors());
+    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+     echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
+    }
+    sqlsrv_free_stmt($getResults);
 ?>
