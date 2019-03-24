@@ -1,20 +1,20 @@
-<?php
-session_start();
-
-// Define database
-define('dbhost', 'vivacard.database.windows.net');
-define('dbuser', 'vivacard');
-define('dbpass', 'Mysql123');
-define('dbname', 'db_group_e_cm004');
 
 
-// Connecting database
+// PHP Data Objects(PDO) Sample Code:
+<? php
 try {
-    $connect = new PDO("mysql:host=".dbhost."; dbname=".dbname, dbuser, dbpass);
-    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO("sqlsrv:server = tcp:vivacard.database.windows.net,1433; Database = vivacarddb", "vivacard", "Mysql123");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
-catch(PDOException $e) {
-    echo $e->getMessage();
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
 }
+
+// SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "vivacard@vivacard", "pwd" => "Mysql123", "Database" => "vivacarddb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:vivacard.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 
 ?>
+
