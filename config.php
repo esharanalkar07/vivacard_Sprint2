@@ -17,15 +17,15 @@ foreach ($_SERVER as $key => $value) {
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('vivacarddb', $connectstr_dbname);
+define('DB_NAME', $connectstr_dbname);
 
 /** MySQL database username */
-define('vivacard', $connectstr_dbusername);
+define('DB_USER', $connectstr_dbusername);
 
 /** MySQL database password */
-define('Mysql123', $connectstr_dbpassword);
+define('DB_PASSWORD', $connectstr_dbpassword);
 
 /** MySQL hostname : this contains the port number in this format host:port . Port is not 3306 when using this feature*/
-define('vivacard1.scm.azurewebsites.net:50884', $connectstr_dbhost);
+define('DB_HOST', $connectstr_dbhost);
 
 ?>
