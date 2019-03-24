@@ -2,9 +2,9 @@
 session_start();
 
 // Define database
-define('dbhost', 'localhost');
-define('dbuser', 'root');
-define('dbpass', '');
+define('dbhost', 'vivacard.database.windows.net');
+define('dbuser', 'vivacard');
+define('dbpass', 'Mysql123');
 define('dbname', 'db_group_e_cm004');
 
 
