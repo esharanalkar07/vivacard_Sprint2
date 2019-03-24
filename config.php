@@ -3,7 +3,7 @@ session_start();
 
 // Define database
 define('dbhost', '127.0.0.1:50884');
-define('dbuser', 'vivacard@vivacard');
+define('dbuser', 'vivacard');
 define('dbpass', '');
 define('dbname', 'vivacarddb');
 
