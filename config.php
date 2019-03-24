@@ -26,6 +26,6 @@ define('vivacard', $connectstr_dbusername);
 define('Mysql123', $connectstr_dbpassword);
 
 /** MySQL hostname : this contains the port number in this format host:port . Port is not 3306 when using this feature*/
-define('vivacard1.scm.azurewebsites.net', $connectstr_dbhost);
+define('vivacard1.scm.azurewebsites.net:50884', $connectstr_dbhost);
 
 ?>
