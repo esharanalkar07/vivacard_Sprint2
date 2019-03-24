@@ -1,5 +1,5 @@
 <?
-$connectstr_dbhost = 'vivacard.database.windows.net';
+$connectstr_dbhost = 'vivacard1.scm.azurewebsites.net';
 $connectstr_dbname = 'vivacarddb';
 $connectstr_dbusername = 'vivacard';
 $connectstr_dbpassword = 'Mysql123';
