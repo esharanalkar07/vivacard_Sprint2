@@ -1,6 +1,6 @@
 
 <? php
-session_start();
+//session_start();
 
 // Define database
 define('dbhost', 'vivacard.database.windows.net');
