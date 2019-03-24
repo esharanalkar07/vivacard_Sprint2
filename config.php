@@ -1,25 +1,16 @@
 <?php
-    $serverName = "vivacard.database.windows.net"; // update me
-    $connectionOptions = array(
-        "Database" => "vivacarddb", // update me
-        "Uid" => "vivacard", // update me
-        "PWD" => "Mysql123" // update me
-    );
-    //Establishes the connection
-    $connect = sqlsrv_connect($serverName, $connectionOptions);
+$servername = "vivacard.database.windows.net";
+$username = "<vivacard>";
+ $password = "<Mysql123>";
 
-
-   /* $tsql= "SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
-         FROM [SalesLT].[ProductCategory] pc
-         JOIN [SalesLT].[Product] p
-         ON pc.productcategoryid = p.productcategoryid";
-    $getResults= sqlsrv_query($conn, $tsql);
-    echo ("Reading data from table" . PHP_EOL);
-    if ($getResults == FALSE)
-        echo (sqlsrv_errors());
-    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-     echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=vivacarddb", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";  
     }
-    sqlsrv_free_stmt($getResults);
-    */
-?>
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+?> 
