@@ -5,7 +5,7 @@ $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
 foreach ($_SERVER as $key => $value) {
-    if (strpos($key, "MYSQLCONNSTR_vivacarddb") !== 0) {
+    if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
         continue;
     }
     
