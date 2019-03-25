@@ -1,7 +1,7 @@
 <? php
 
 // Define database
-define('dbhost', 'vivacardshare.scm.azurewebsites.net');
+define('dbhost', '127.0.0.1');
 define('dbuser', '');
 define('dbpass', '');
 define('dbname', 'localdb');
