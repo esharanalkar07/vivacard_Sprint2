@@ -1,8 +1,8 @@
 <?
 $connectstr_dbhost = 'vivacardshare.scm.azurewebsites.net';
 $connectstr_dbname = 'localdb';
-$connectstr_dbusername = '';
-$connectstr_dbpassword = '';
+$connectstr_dbusername = 'root';
+$connectstr_dbpassword = 'pwd';
 foreach ($_SERVER as $key => $value) {
  if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
  continue;
