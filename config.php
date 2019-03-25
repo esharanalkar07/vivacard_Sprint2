@@ -1,6 +1,6 @@
 <?php
-$connectstr_dbhost = '';
-$connectstr_dbname = '';
+$connectstr_dbhost = ' 127.0.0.1';
+$connectstr_dbname = 'localdb';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 foreach ($_SERVER as $key => $value) {
